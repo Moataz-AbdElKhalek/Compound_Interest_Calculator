@@ -12,7 +12,8 @@ investment_values['compound_value'] = initial_investment * ((1+interest_rate)**i
 
 print(investment_values)
 
-print(f'\nTotal money at {interest_rate}% in {number_of_years} years is:  ', round(investment_values.at[number_of_years-1,'compound_value'] , 2) )
+print(f'\nTotal money at {interest_rate*100}% in {number_of_years} years is:', round(investment_values.at[number_of_years-1,'compound_value'] , 2) )
+print(f'Money gained is:', round(investment_values.at[number_of_years-1,'compound_value'] - initial_investment, 2) )
 
 # Plot the line
 
